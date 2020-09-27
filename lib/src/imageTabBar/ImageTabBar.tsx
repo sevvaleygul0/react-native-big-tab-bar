@@ -1,17 +1,18 @@
-import React, {Component} from 'react';
-import {Text, View, Image, TouchableOpacity, ScrollView} from 'react-native';
-import Androw from 'react-native-androw';
+import React, { Component } from "react";
+import { Text, View, Image, TouchableOpacity, ScrollView } from "react-native";
+import Androw from "react-native-androw";
+
+/**
+ * ? Local Imports
+ */
+
 import styles, {
   _buttonStyle,
   _shadowStyle,
   _innerContainerStyle,
   _textStyle,
   _innerTextStyle,
-} from './ImageTabBar.style';
-
-/**
- * ? Local Imports
- */
+} from "./ImageTabBar.style";
 
 export interface TabBar {
   id: number;
@@ -63,8 +64,8 @@ export default class ImageTabBar extends Component<IProps, IState> {
   componentDidMount() {}
 
   handleOnPress = (item: TabBar) => {
-    const {onPress, onChange} = this.props;
-    this.setState({selected: item.id});
+    const { onPress, onChange } = this.props;
+    this.setState({ selected: item.id });
     onPress && onPress(item);
     onChange && onChange(item);
   };
@@ -76,22 +77,22 @@ export default class ImageTabBar extends Component<IProps, IState> {
       height = 120,
       width = 75,
       borderRadius = 36,
-      borderColor = '#E8E8E8',
-      shadowColor = '#757575',
+      borderColor = "#E8E8E8",
+      shadowColor = "#757575",
       innerContainerHeight = 50,
       innerContainerWeight = 50,
       innerContainerBorderRadius = 25,
-      inActiveBackgroundColor = '#fff',
-      inActiveTextColor = '#3A3A3A',
-      activeTextColor = '#fff',
+      inActiveBackgroundColor = "#fff",
+      inActiveTextColor = "#3A3A3A",
+      activeTextColor = "#fff",
       ImageComponent = Image,
       imageStyle,
       textIsActive = false,
-      innerActiveTextColor = '#F5C812',
-      innerInActiveTextColor = '#F5C812',
+      innerActiveTextColor = "#F5C812",
+      innerInActiveTextColor = "#F5C812",
       innerTextStyle,
-      activeBackgroundColor = '#F5C812',
-      activeInnerContainerBackgroundColor = '#fff',
+      activeBackgroundColor = "#F5C812",
+      activeInnerContainerBackgroundColor = "#fff",
     } = this.props;
 
     return tabs.map((item: TabBar) => {
@@ -109,7 +110,8 @@ export default class ImageTabBar extends Component<IProps, IState> {
               activeBackgroundColor,
               isActive,
             )}
-            onPress={() => this.handleOnPress(item)}>
+            onPress={() => this.handleOnPress(item)}
+          >
             <View
               style={_innerContainerStyle(
                 innerContainerHeight,
@@ -119,7 +121,8 @@ export default class ImageTabBar extends Component<IProps, IState> {
                 inActiveBackgroundColor,
                 activeInnerContainerBackgroundColor,
                 isActive,
-              )}>
+              )}
+            >
               {item.image ? (
                 <ImageComponent
                   source={item.image}
@@ -134,7 +137,8 @@ export default class ImageTabBar extends Component<IProps, IState> {
                       isActive,
                     ),
                     innerTextStyle,
-                  ]}>
+                  ]}
+                >
                   {item.number}
                 </Text>
               ) : null}
@@ -143,7 +147,8 @@ export default class ImageTabBar extends Component<IProps, IState> {
               style={[
                 _textStyle(inActiveTextColor, activeTextColor, isActive),
                 textStyle,
-              ]}>
+              ]}
+            >
               {item.text}
             </Text>
           </TouchableOpacity>

@@ -1,6 +1,6 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import ImageTabBar from './lib/src/imageTabBar/ImageTabBar.tsx';
+import {View} from 'react-native';
+import ImageTabBar from 'react-native-big-tab-bar';
 
 const tabs = [
   {

@@ -1,23 +1,29 @@
 {
-  "name": "react-native-typescript-library-starter",
-  "version": "1.0.1",
-  "description": "Extremely easy to create a React Native Component Library with both Stateful and Functional Component Examples.",
-  "main": "./build/dist/index.js",
-  "repository": "git@github.com:WrathChaos/react-native-typescript-library-starter.git",
-  "author": "FreakyCoder <kurayogun@gmail.com>",
+  "name": "react-native-big-tab-bar",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./lib/src/imageTabBar/ImageTabBar.tsx",
+  "repository": "https://github.com/sevvaleygul0/react-native-big-tab-bar",
+  "author": "Sevval Eygul <sevvalleygull@gmail.com>",
   "license": "MIT",
-  "homepage": "https://www.freakycoder.com",
-  "bugs": "https://github.com/WrathChaos/react-native-typescript-library-starter/issues",
+  "bugs": "https://github.com/sevvaleygul0/react-native-big-tab-bar/issues",
   "keywords": [
-    "FreakyCoder",
-    "freakycoder",
-    "kuray",
-    "Kuray",
+    "SevvalEygul",
+    "Sevvaleygul",
+    "sevval",
+    "Sevval",
     "react",
     "react-native",
     "javascript",
+    "typescript",
     "ui-lib",
-    "rn"
+    "rn",
+    "react-native-library",
+    "tab-bar",
+    "bar",
+    "big-tab-bar",
+    "BigTabBar",
+    "react-native-big-tab-bar"
   ],
   "scripts": {
     "build": "cd lib && tsc && cp ../package.json ../build/dist/ && Echo Build completed!",
@@ -28,7 +34,8 @@
   },
   "peerDependencies": {
     "react": ">= 16.x.x",
-    "react-native": ">= 0.55.x"
+    "react-native": ">= 0.55.x",
+    "react-native-androw": "0.0.34"
   },
   "devDependencies": {
     "@types/react": "^16.9.22",
@@ -52,5 +59,6 @@
       "npx prettier --write",
       "eslint src/*.js --fix-dry-run"
     ]
-  }
+  },
+  "dependencies": {}
 }
