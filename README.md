@@ -70,7 +70,7 @@ import BigTabBar from "react-native-big-tab-bar";
 | inActiveBackgroundColor             |  string  |  "#fff"   | set the background color when it is inactive                                              |
 | inActiveTextColor                   |  string  | "#3A3A3A" | set the text color when it is inactive                                                    |
 | activeTextColor                     |  string  |  "#fff"   | set the text color when it is active                                                      |
-| ImageComponent                      |          |           |                                                                                           |
+| ImageComponent                      |          |   Image   |                                                                                           |
 | imageStyle                          |  style   |     -     | set your custom image style                                                               |
 | textIsActive                        | boolean  |   false   | the number can be displayed on the inner container (instead of image)                     |
 | innerActiveTextColor                |  string  | "#F5C812" | if there are numbers in the inner container, you can change the color when it is active   |
