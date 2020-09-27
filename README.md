@@ -1,57 +1,41 @@
-<img alt="React Native Typescript Library Starter" src="assets/logo.png" width="1050"/>
+<img alt="react native big tab bar logo" src="assets/big-tab-bar-logo.png" width="1050"/>
 
-[![Battle Tested ✅](https://img.shields.io/badge/-Battle--Tested%20%E2%9C%85-03666e?style=for-the-badge)](https://github.com/WrathChaos/react-native-typescript-library-starter)
+## Demo
 
-[![React Native Typescript Library Starter](https://img.shields.io/badge/-Extremely%20easy%20to%20create%20a%20React%20Native%20Component%20Library%20with%20both%20Stateful%20and%20Functional%20Component%20Examples-orange?style=for-the-badge)](https://github.com/WrathChaos/react-native-typescript-library-starter)
-
-[![npm version](https://img.shields.io/npm/v/react-native-typescript-library-starter.svg?style=for-the-badge)](https://www.npmjs.com/package/react-native-typescript-library-starter)
-[![npm](https://img.shields.io/npm/dt/react-native-typescript-library-starter.svg?style=for-the-badge)](https://www.npmjs.com/package/react-native-typescript-library-starter)
-![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-blue.svg?style=for-the-badge)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=for-the-badge)](https://github.com/prettier/prettier)
-
-<p align="center">
+<table>
+<tr>
+    <td align="center">
   <img alt="React Native Typescript Library Starter"
-        src="assets/Screenshots/typescript.jpg" />
-</p>
-
-## Library Usage
-
-- `npm i`
-- Delete example folder
-- Delete build folder
-- Make your own library into the `lib` folder
-- Change package.json
-- Change README for your own documentation
-- `npm run build`
-
-```
-> react-native-typescript-library-starter@0.1.0 build /Users/kuray/Coursion/MyLibraries/ReactNative/react-native-typescript-library-starter
-> cd lib && tsc && cp ../package.json ../build/dist/ && Echo Build completed!
-
-Build completed!
-```
-
-- Test your build/dist into the new project
-- Finally, time to npm publish :)
-
-### Below part is for Documentation ! Remove above Library Usage
+        src="assets/Screenshots/screenshot-number-example.png"
+         />
+  </td>
+    <td align="center">
+  <img alt="React Native Typescript Library Starter"
+        src="assets/Screenshots/screenshot-image-example.png" />
+</td>
+  </tr>
+  <tr>
+  <img alt="React Native Typescript Library Starter"
+        src="assets/Gif/big-tab-bar.gif" />
+  </tr>
+</table>
 
 # Installation
 
 Add the dependency:
 
-```bash
-npm i react-native-typescript-library-starter
+```ruby
+npm i react-native-big-tab-bar
 ```
 
 ## Peer Dependencies
 
-<h5><i>IMPORTANT! You need install them</i></h5>
+###### IMPORTANT! You need install them
 
 ```js
 "react": ">= 16.x.x",
 "react-native": ">= 0.55.x",
+"react-native-androw": "0.0.34"
 ```
 
 # Usage
@@ -59,28 +43,49 @@ npm i react-native-typescript-library-starter
 ## Import
 
 ```jsx
-import MyComponent from "react-native-typescript-library-starter";
+import BigTabBar from "react-native-big-tab-bar";
 ```
 
 ## Fundamental Usage
 
 ```jsx
-<MyComponent />
+<BigTabBar tabs={tabs} />
 ```
 
 # Configuration - Props
 
-| Property |  Type   | Default | Description                                             |
-| -------- | :-----: | :-----: | ------------------------------------------------------- |
-| outline  | boolean |  true   | make the button outline                                 |
-| solid    | boolean |  false  | make the button with a solid background and a shadow    |
-| gradient | boolean |  false  | make the button with a gradient background and a shadow |
-| width    | number  |   150   | change the button's width                               |
+| Property                            |   Type   |  Default  | Description                                                                               |
+| ----------------------------------- | :------: | :-------: | ----------------------------------------------------------------------------------------- |
+| tabs                                |  array   |           | Set your tab bar items                                                                    |
+| textStyle                           |  style   |     -     | set your custom text style                                                                |
+| firstSelectedItem                   |  number  |     0     | set your initial item                                                                     |
+| height                              |  number  |    120    | change the button's height                                                                |
+| width                               |  number  |    75     | change the button's width                                                                 |
+| borderRadius                        |  number  |    36     | change the button's border radius                                                         |
+| borderColor                         |  string  | "#E8E8E8" | change the button's border color                                                          |
+| shadowColor                         |  string  | "#757575" | change the button's shadow color                                                          |
+| innerContainerHeight                |  number  |    50     | set the height of the inner container                                                     |
+| innerContainerWeight                |  number  |    50     | set the width of the inner container                                                      |
+| innerContainerBorderRadius          |  number  |    25     | set the border radius of the inner container                                              |
+| inActiveBackgroundColor             |  string  |  "#fff"   | set the background color when it is inactive                                              |
+| inActiveTextColor                   |  string  | "#3A3A3A" | set the text color when it is inactive                                                    |
+| activeTextColor                     |  string  |  "#fff"   | set the text color when it is active                                                      |
+| ImageComponent                      |          |           |                                                                                           |
+| imageStyle                          |  style   |     -     | set your custom image style                                                               |
+| textIsActive                        | boolean  |   false   | the number can be displayed on the inner container (instead of image)                     |
+| innerActiveTextColor                |  string  | "#F5C812" | if there are numbers in the inner container, you can change the color when it is active   |
+| innerInActiveTextColor              |  string  | "#F5C812" | if there are numbers in the inner container, you can change the color when it is inactive |
+| activeTextColor                     |  string  |  "#fff"   | set the text color when it is active                                                      |
+| innerTextStyle                      |  style   |           | set your custom text style                                                                |
+| activeBackgroundColor               |  string  | "#F5C812" | set your active background color                                                          |
+| activeInnerContainerBackgroundColor |  style   |  "#fff"   | set the color of the inner container when it is active                                    |
+| innerActiveTextColor                |  string  | "#F5C812" | if there are numbers in the inner container, you can change the color when it is active   |
+| onPress                             | function |    ()     | set your own function when onPress                                                        |
+| onChange                            | function |    ()     | set your own function when onChange                                                       |
 
 ## Future Plans
 
 - [x] ~~LICENSE~~
-- [ ] Write an article about the lib on Medium
 
 # Change Log
 
@@ -88,8 +93,8 @@ Change log will be here !
 
 ## Author
 
-FreakyCoder, kurayogun@gmail.com
+Sevval Eygul, sevvalleygull@gmail.com
 
 ## License
 
-React Native Typescript Library Starter is available under the MIT license. See the LICENSE file for more info.
+React Native Big Tab Bar is available under the MIT license. See the LICENSE file for more info.

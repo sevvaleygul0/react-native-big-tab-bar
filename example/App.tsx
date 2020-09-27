@@ -1,6 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
-import ImageTabBar from 'react-native-big-tab-bar';
+import BigTabBar from 'react-native-big-tab-bar';
 
 const tabs = [
   {
@@ -54,7 +54,7 @@ const App = () => {
         marginTop: 200,
         height: 150,
       }}>
-      <ImageTabBar textIsActive={true} tabs={tabs} />
+      <BigTabBar textIsActive={true} tabs={tabs} />
     </View>
   );
 };
