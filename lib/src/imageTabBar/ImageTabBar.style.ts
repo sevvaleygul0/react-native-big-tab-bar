@@ -65,7 +65,7 @@ export const _textStyle = (
   activeTextColor: string,
   isActive: boolean,
 ) => ({
-  fontSize: 11,
+  fontSize: 10,
   color: isActive ? activeTextColor : inActiveTextColor,
   fontWeight: 'bold',
   marginBottom: 10,

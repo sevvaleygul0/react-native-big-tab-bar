@@ -1,6 +1,6 @@
 {
   "name": "react-native-big-tab-bar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "./lib/src/imageTabBar/ImageTabBar.tsx",
   "repository": "https://github.com/sevvaleygul0/react-native-big-tab-bar",
