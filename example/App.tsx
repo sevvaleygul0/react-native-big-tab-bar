@@ -1,7 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
-// import BigTabBar from 'react-native-big-tab-bar';
-import BigTabBar, {ITabBar} from './lib/src/BigTabBar';
+import BigTabBar, {ITabBar} from 'react-native-big-tab-bar';
 
 const tabs: ITabBar = [
   {

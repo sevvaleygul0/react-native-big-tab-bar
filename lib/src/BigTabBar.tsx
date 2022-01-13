@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 import {
   Text,
   View,
@@ -8,8 +8,8 @@ import {
   StyleProp,
   TextStyle,
   ImageStyle,
-} from 'react-native';
-import Androw from 'react-native-androw';
+} from "react-native";
+import Androw from "react-native-androw";
 /**
  * ? Local Imports
  */
@@ -19,7 +19,7 @@ import styles, {
   _innerContainerStyle,
   _textStyle,
   _innerTextStyle,
-} from './BigTabBar.style';
+} from "./BigTabBar.style";
 /**
  * ? Types
  */
@@ -28,12 +28,12 @@ type CustomImageStyleProp =
   | StyleProp<ImageStyle>
   | Array<StyleProp<ImageStyle>>;
 
-export interface ITabBar {
+export type ITabBar = {
   id: number;
   text: string;
   number?: number;
   image?: any;
-}
+};
 
 interface IProps {
   tabs: Array<ITabBar>;
@@ -75,8 +75,8 @@ export default class BigTabBar extends Component<IProps, IState> {
   }
 
   handleOnPress = (item: ITabBar) => {
-    const {onPress, onChange} = this.props;
-    this.setState({selected: item.id});
+    const { onPress, onChange } = this.props;
+    this.setState({ selected: item.id });
     onPress && onPress(item);
     onChange && onChange(item);
   };
@@ -84,15 +84,16 @@ export default class BigTabBar extends Component<IProps, IState> {
   renderTextContainer = (text: string, isActive: boolean) => {
     const {
       textStyle,
-      inActiveTextColor = '#3A3A3A',
-      activeTextColor = '#fff',
+      inActiveTextColor = "#3A3A3A",
+      activeTextColor = "#fff",
     } = this.props;
     return (
       <Text
         style={[
           _textStyle(inActiveTextColor, activeTextColor, isActive),
           textStyle,
-        ]}>
+        ]}
+      >
         {text}
       </Text>
     );
@@ -100,18 +101,18 @@ export default class BigTabBar extends Component<IProps, IState> {
 
   renderContentContainer = (item: ITabBar, isActive: boolean) => {
     const {
-      borderColor = '#E8E8E8',
+      borderColor = "#E8E8E8",
       innerContainerHeight = 50,
       innerContainerWeight = 46,
       innerContainerBorderRadius = 22,
-      inActiveBackgroundColor = '#fff',
+      inActiveBackgroundColor = "#fff",
       ImageComponent = Image,
       imageStyle,
       textIsActive = false,
-      innerActiveTextColor = '#F5C812',
-      innerInActiveTextColor = '#F5C812',
+      innerActiveTextColor = "#F5C812",
+      innerInActiveTextColor = "#F5C812",
       innerTextStyle,
-      activeInnerContainerBackgroundColor = '#fff',
+      activeInnerContainerBackgroundColor = "#fff",
     } = this.props;
 
     return (
@@ -124,7 +125,8 @@ export default class BigTabBar extends Component<IProps, IState> {
           inActiveBackgroundColor,
           activeInnerContainerBackgroundColor,
           isActive,
-        )}>
+        )}
+      >
         {item.image && ImageComponent ? (
           <ImageComponent
             source={item.image}
@@ -141,7 +143,8 @@ export default class BigTabBar extends Component<IProps, IState> {
                   isActive,
                 ),
                 innerTextStyle,
-              ]}>
+              ]}
+            >
               {item.number}
             </Text>
           )
@@ -156,10 +159,10 @@ export default class BigTabBar extends Component<IProps, IState> {
       height = 120,
       width = 75,
       borderRadius = 36,
-      borderColor = '#E8E8E8',
-      shadowColor = '#757575',
-      inActiveBackgroundColor = '#fff',
-      activeBackgroundColor = '#F5C812',
+      borderColor = "#E8E8E8",
+      shadowColor = "#757575",
+      inActiveBackgroundColor = "#fff",
+      activeBackgroundColor = "#F5C812",
     } = this.props;
 
     return tabs.map((item: ITabBar) => {
@@ -177,7 +180,8 @@ export default class BigTabBar extends Component<IProps, IState> {
               activeBackgroundColor,
               isActive,
             )}
-            onPress={() => this.handleOnPress(item)}>
+            onPress={() => this.handleOnPress(item)}
+          >
             {this.renderContentContainer(item, isActive)}
             {this.renderTextContainer(item.text, isActive)}
           </TouchableOpacity>

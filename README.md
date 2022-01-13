@@ -1,6 +1,6 @@
 <img alt="react native big tab bar logo" src="assets/big-tab-bar-logo.png" width="1050"/>
 
-## Demo
+# Demo
 
 <table>
 <tr>
@@ -33,8 +33,6 @@ npm i react-native-big-tab-bar
 ###### IMPORTANT! You need install them
 
 ```js
-"react": ">= 16.x.x",
-"react-native": ">= 0.55.x",
 "react-native-androw": "0.0.34"
 ```
 
@@ -46,7 +44,36 @@ npm i react-native-big-tab-bar
 import BigTabBar from "react-native-big-tab-bar";
 ```
 
-## Fundamental Usage
+## Data Model
+
+```
+export type ITabBar = {
+  id: number;
+  text: string;
+  number?: number;
+  image?: any;
+};
+```
+
+## Example Data
+
+```
+[{
+    id: 0,
+    text: 'Monday',
+    number: 8,
+  },
+  {
+    id: 1,
+    text: 'Tuesday',
+    image: {
+      uri: 'https://image.winudf.com/v2/image/Y29tLnNnbS5iZWFjaHdhbGxwYXBlcmhkX3NjcmVlbnNob3RzXzJfZjRhOGQ4MzQ/screen-2.jpg?fakeurl=1&type=.jpg',
+    },
+  }
+}
+```
+
+## Example Usage
 
 ```jsx
 <BigTabBar tabs={tabs} />

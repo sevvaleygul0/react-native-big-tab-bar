@@ -5155,10 +5155,15 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   "version" "17.0.2"
 
-"react-native-androw@0.0.34":
+"react-native-androw@^0.0.34", "react-native-androw@0.0.34":
   "integrity" "sha512-YuW0GxYNzABvPPe6k+JdLUF5CAzKSW5R6IxxA/+fg5gc+4avE1tZgLmnRfNtXJCbW9r90YLYp33S9Uu2pe//fg=="
   "resolved" "https://registry.npmjs.org/react-native-androw/-/react-native-androw-0.0.34.tgz"
   "version" "0.0.34"
+
+"react-native-big-tab-bar@^0.0.3":
+  "integrity" "sha512-nntaEb3HcdSpwKmFg+ljohw6fRD+P4oIvdayi69U8hOHsmDwwvVMgakjMYBeDtKHuIPgkH+oZrx2eBDT92INPQ=="
+  "resolved" "https://registry.npmjs.org/react-native-big-tab-bar/-/react-native-big-tab-bar-0.0.3.tgz"
+  "version" "0.0.3"
 
 "react-native-codegen@^0.0.7":
   "integrity" "sha512-dwNgR8zJ3ALr480QnAmpTiqvFo+rDtq6V5oCggKhYFlRjzOmVSFn3YD41u8ltvKS5G2nQ8gCs2vReFFnRGLYng=="
