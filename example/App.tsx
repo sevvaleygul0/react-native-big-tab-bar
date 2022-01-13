@@ -1,8 +1,9 @@
 import React from 'react';
 import {View} from 'react-native';
-import BigTabBar from 'react-native-big-tab-bar';
+// import BigTabBar from 'react-native-big-tab-bar';
+import BigTabBar, {ITabBar} from './lib/src/BigTabBar';
 
-const tabs = [
+const tabs: ITabBar = [
   {
     id: 0,
     text: 'Monday',
@@ -12,8 +13,7 @@ const tabs = [
     id: 1,
     text: 'Tuesday',
     image: {
-      uri:
-        'https://image.winudf.com/v2/image/Y29tLnNnbS5iZWFjaHdhbGxwYXBlcmhkX3NjcmVlbnNob3RzXzJfZjRhOGQ4MzQ/screen-2.jpg?fakeurl=1&type=.jpg',
+      uri: 'https://image.winudf.com/v2/image/Y29tLnNnbS5iZWFjaHdhbGxwYXBlcmhkX3NjcmVlbnNob3RzXzJfZjRhOGQ4MzQ/screen-2.jpg?fakeurl=1&type=.jpg',
     },
   },
   {
@@ -35,8 +35,7 @@ const tabs = [
     id: 5,
     text: 'Saturday',
     image: {
-      uri:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSeNdKCmO35y2RMPWixGFmuHSv1nCq8b6-Dqw&usqp=CAU',
+      uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSeNdKCmO35y2RMPWixGFmuHSv1nCq8b6-Dqw&usqp=CAU',
     },
   },
   {

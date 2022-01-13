@@ -45,7 +45,7 @@
     "eslint-config-airbnb": "^18.2.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5",
+    "prettier": "2.5.1",
     "react-native-typescript-transformer": "^1.2.13",
     "typescript": "^3.7.4"
   },
