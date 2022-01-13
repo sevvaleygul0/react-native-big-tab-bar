@@ -5311,11 +5311,6 @@
   "resolved" "https://registry.npmjs.org/react-native-androw/-/react-native-androw-0.0.34.tgz"
   "version" "0.0.34"
 
-"react-native-big-tab-bar@^0.0.3":
-  "integrity" "sha512-nntaEb3HcdSpwKmFg+ljohw6fRD+P4oIvdayi69U8hOHsmDwwvVMgakjMYBeDtKHuIPgkH+oZrx2eBDT92INPQ=="
-  "resolved" "https://registry.npmjs.org/react-native-big-tab-bar/-/react-native-big-tab-bar-0.0.3.tgz"
-  "version" "0.0.3"
-
 "react-native-codegen@^0.0.6":
   "integrity" "sha512-cMvrUelD81wiPitEPiwE/TCNscIVauXxmt4NTGcy18HrUd0WRWXfYzAQGXm0eI87u3NMudNhqFj2NISJenxQHg=="
   "resolved" "https://registry.npmjs.org/react-native-codegen/-/react-native-codegen-0.0.6.tgz"
