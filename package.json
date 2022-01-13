@@ -1,8 +1,8 @@
 {
   "name": "react-native-big-tab-bar",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "react native image / number tab bar",
-  "main": "./build/dist/ImageTabBar.js",
+  "main": "./build/dist/BigTabBar.js",
   "repository": "https://github.com/sevvaleygul0/react-native-big-tab-bar",
   "author": "Sevval Eygul <sevvalleygull@gmail.com>",
   "license": "MIT",
