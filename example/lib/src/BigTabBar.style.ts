@@ -1,61 +1,32 @@
 import {ViewStyle, ImageStyle, StyleSheet, TextStyle} from 'react-native';
 
-/**
- * ? Local Imports
- */
-
 interface Style {
   container: ViewStyle;
   imageStyle: ImageStyle;
 }
 
 export const _buttonStyle = (
-  width: number,
-  height: number,
-  borderRadius: number,
-  borderColor: string,
   backgroundColor: string,
   activeBackgroundColor: string,
   isActive: boolean,
-):ViewStyle => ({
-  width,
-  height,
-  borderRadius,
-  borderColor,
+): ViewStyle => ({
+  minWidth: 72,
+  borderRadius: 40,
   margin: 10,
-  borderWidth: 1.4,
   alignItems: 'center',
   justifyContent: 'space-around',
   backgroundColor: isActive ? activeBackgroundColor : backgroundColor,
 });
 
-export const _shadowStyle = (shadowColor: string):ViewStyle => ({
-  shadowColor,
-  shadowRadius: 8,
-  shadowOpacity: 0.2,
-  shadowOffset: {
-    width: 0,
-    height: 3,
-  },
-});
-
 export const _innerContainerStyle = (
   height: number,
   width: number,
-  borderRadius: number,
-  borderColor: string,
   backgroundColor: string,
-  activeInnerContainerBackgroundColor: string,
-  isActive: boolean,
-) : ViewStyle=> ({
+): ViewStyle => ({
   height,
   width,
-  borderRadius,
-  borderColor: isActive ? '#F3C099' : borderColor,
-  backgroundColor: isActive
-    ? activeInnerContainerBackgroundColor
-    : backgroundColor,
-  borderWidth: 1.4,
+  borderRadius: 22,
+  backgroundColor,
   justifyContent: 'center',
   alignItems: 'center',
 });
@@ -75,8 +46,8 @@ export const _innerTextStyle = (
   innerActiveTextColor: string,
   innerInActiveTextColor: string,
   isActive: boolean,
-) :TextStyle => ({
-  fontSize: 20,
+): TextStyle => ({
+  fontSize: 23,
   color: isActive ? innerActiveTextColor : innerInActiveTextColor,
   fontWeight: 'bold',
 });
@@ -87,8 +58,8 @@ export default StyleSheet.create<Style>({
     borderWidth: 2,
   },
   imageStyle: {
-    width: 30,
-    height: 30,
-    borderRadius: 15,
+    width: '100%',
+    height: '100%',
+    borderRadius: 22,
   },
 });

@@ -38,27 +38,22 @@
     "react-native-androw": "^0.0.34"
   },
   "devDependencies": {
-    "@react-native-community/eslint-config": "^0.0.5",
-    "@types/react": "^16.9.22",
-    "@types/react-native": "^0.63.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
-    "prettier": "2.5.1",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@react-native/eslint-config": "^0.73.0",
+    "@types/react": "^18.0.17",
+    "@types/react-native": "^0.72.0",
+    "cpx": "^1.5.0",
+    "eslint": "^8.36.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "npm-post-install": "0.0.2",
+    "prettier": "^3.0.0",
+    "prettier-format": "^3.1.0",
     "react-native-typescript-transformer": "^1.2.13",
-    "typescript": "^3.7.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "./src/*.{js,jsx,ts,tsx}": [
-      "npx prettier --write",
-      "eslint src/*.js --fix-dry-run"
-    ]
+    "semantic-release": "^21.0.0",
+    "typescript": "^5.0.2"
   },
   "dependencies": {
     "node-fetch": "^3.1.1",
