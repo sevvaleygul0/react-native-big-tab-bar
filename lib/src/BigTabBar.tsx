@@ -46,7 +46,7 @@ interface IProps {
   inActiveBackgroundColor?: string;
   inActiveTextColor?: string;
   activeTextColor?: string;
-  ImageComponent?: React.ReactNode;
+  ImageComponent?: any;
   imageStyle?: CustomImageStyleProp;
   innerActiveTextColor?: string;
   innerInActiveTextColor?: string;
