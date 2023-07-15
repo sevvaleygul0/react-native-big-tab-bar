@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 import {
   Text,
   View,
@@ -9,7 +9,7 @@ import {
   TextStyle,
   ImageStyle,
   ViewStyle,
-} from 'react-native';
+} from "react-native";
 /**
  * ? Local Imports
  */
@@ -18,7 +18,7 @@ import styles, {
   _innerContainerStyle,
   _textStyle,
   _innerTextStyle,
-} from './BigTabBar.style';
+} from "./BigTabBar.style";
 
 /**
  * ? Types
@@ -46,7 +46,7 @@ interface IProps {
   inActiveBackgroundColor?: string;
   inActiveTextColor?: string;
   activeTextColor?: string;
-  ImageComponent?: any;
+  ImageComponent?: React.ReactNode;
   imageStyle?: CustomImageStyleProp;
   innerActiveTextColor?: string;
   innerInActiveTextColor?: string;
@@ -68,8 +68,8 @@ export default class BigTabBar extends Component<IProps, IState> {
   }
 
   handleOnPress = (item: ITabBar) => {
-    const {onPress, onChange} = this.props;
-    this.setState({selected: item.id});
+    const { onPress, onChange } = this.props;
+    this.setState({ selected: item.id });
     onPress && onPress(item);
     onChange && onChange(item);
   };
@@ -77,15 +77,16 @@ export default class BigTabBar extends Component<IProps, IState> {
   renderBottomTextContainer = (text: string, isActive: boolean) => {
     const {
       bottomTextStyle,
-      inActiveTextColor = '#6e685f',
-      activeTextColor = '#fff',
+      inActiveTextColor = "#6e685f",
+      activeTextColor = "#fff",
     } = this.props;
     return (
       <Text
         style={[
           _textStyle(inActiveTextColor, activeTextColor, isActive),
           bottomTextStyle,
-        ]}>
+        ]}
+      >
         {text}
       </Text>
     );
@@ -97,9 +98,9 @@ export default class BigTabBar extends Component<IProps, IState> {
       innerContainerWeight = 46,
       ImageComponent = Image,
       imageStyle,
-      innerActiveTextColor = '#F5C812',
-      innerInActiveTextColor = '#F5C812',
-      inActiveBackgroundColor = '#faeed9',
+      innerActiveTextColor = "#F5C812",
+      innerInActiveTextColor = "#F5C812",
+      inActiveBackgroundColor = "#faeed9",
       innerTextStyle,
     } = this.props;
 
@@ -109,7 +110,8 @@ export default class BigTabBar extends Component<IProps, IState> {
           innerContainerHeight,
           innerContainerWeight,
           inActiveBackgroundColor,
-        )}>
+        )}
+      >
         {item.image && ImageComponent ? (
           <ImageComponent
             source={item.image}
@@ -125,7 +127,8 @@ export default class BigTabBar extends Component<IProps, IState> {
                   isActive,
                 ),
                 innerTextStyle,
-              ]}>
+              ]}
+            >
               {item.innerText}
             </Text>
           )
@@ -137,8 +140,8 @@ export default class BigTabBar extends Component<IProps, IState> {
   renderTabs = () => {
     const {
       tabs,
-      inActiveBackgroundColor = '#faeed9',
-      activeBackgroundColor = '#F5C812',
+      inActiveBackgroundColor = "#faeed9",
+      activeBackgroundColor = "#F5C812",
       itemStyle,
     } = this.props;
 
@@ -157,7 +160,8 @@ export default class BigTabBar extends Component<IProps, IState> {
             ),
             itemStyle,
           ]}
-          onPress={() => this.handleOnPress(item)}>
+          onPress={() => this.handleOnPress(item)}
+        >
           {this.renderContentContainer(item, isActive)}
           {this.renderBottomTextContainer(item.bottomText, isActive)}
         </TouchableOpacity>

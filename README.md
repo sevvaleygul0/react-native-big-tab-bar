@@ -36,7 +36,7 @@ npm i react-native-big-tab-bar
 "react-native-androw": "0.0.34"
 ```
 
-# Usage
+`
 
 ## Import
 
@@ -44,33 +44,50 @@ npm i react-native-big-tab-bar
 import BigTabBar from "react-native-big-tab-bar";
 ```
 
+# Usage
+
+```
+<BigTabBar tabs={tabs} />
+```
+
 ## Data Model
 
 ```
 export type ITabBar = {
-  id: number;
-  text: string;
-  number?: number;
-  image?: any;
+id: number;
+text: string;
+number?: number;
+image?: any;
 };
 ```
 
 ## Example Data
 
-```
-[{
+```jsx
+[
+  {
     id: 0,
-    text: 'Monday',
-    number: 8,
+    bottomText: "Monday",
+    innerText: "8",
   },
   {
     id: 1,
-    text: 'Tuesday',
+    bottomText: "Tuesday",
     image: {
-      uri: 'https://image.winudf.com/v2/image/Y29tLnNnbS5iZWFjaHdhbGxwYXBlcmhkX3NjcmVlbnNob3RzXzJfZjRhOGQ4MzQ/screen-2.jpg?fakeurl=1&type=.jpg',
+      uri: "https://image.winudf.com/v2/image/Y29tLnNnbS5iZWFjaHdhbGxwYXBlcmhkX3NjcmVlbnNob3RzXzJfZjRhOGQ4MzQ/screen-2.jpg?fakeurl=1&type=.jpg",
     },
-  }
-}
+  },
+  {
+    id: 2,
+    bottomText: "Wednesday",
+    innerText: "14",
+  },
+  {
+    id: 3,
+    bottomText: "Thursday",
+    image: { uri: "https://images2.alphacoders.com/468/4682.jpg" },
+  },
+];
 ```
 
 ## Example Usage
@@ -79,36 +96,27 @@ export type ITabBar = {
 <BigTabBar tabs={tabs} />
 ```
 
-# Configuration - Props
+## Configuration - Props
 
-| Property                            |   Type   |  Default  | Description                                                                               |
-| ----------------------------------- | :------: | :-------: | ----------------------------------------------------------------------------------------- |
-| tabs                                |  array   |           | Set your tab bar items                                                                    |
-| textStyle                           |  style   |     -     | set your custom text style                                                                |
-| firstSelectedItem                   |  number  |     0     | set your initial item                                                                     |
-| height                              |  number  |    120    | change the button's height                                                                |
-| width                               |  number  |    75     | change the button's width                                                                 |
-| borderRadius                        |  number  |    36     | change the button's border radius                                                         |
-| borderColor                         |  string  | "#E8E8E8" | change the button's border color                                                          |
-| shadowColor                         |  string  | "#757575" | change the button's shadow color                                                          |
-| innerContainerHeight                |  number  |    50     | set the height of the inner container                                                     |
-| innerContainerWeight                |  number  |    50     | set the width of the inner container                                                      |
-| innerContainerBorderRadius          |  number  |    25     | set the border radius of the inner container                                              |
-| inActiveBackgroundColor             |  string  |  "#fff"   | set the background color when it is inactive                                              |
-| inActiveTextColor                   |  string  | "#3A3A3A" | set the text color when it is inactive                                                    |
-| activeTextColor                     |  string  |  "#fff"   | set the text color when it is active                                                      |
-| ImageComponent                      |          |   Image   |                                                                                           |
-| imageStyle                          |  style   |     -     | set your custom image style                                                               |
-| textIsActive                        | boolean  |   false   | the number can be displayed on the inner container (instead of image)                     |
-| innerActiveTextColor                |  string  | "#F5C812" | if there are numbers in the inner container, you can change the color when it is active   |
-| innerInActiveTextColor              |  string  | "#F5C812" | if there are numbers in the inner container, you can change the color when it is inactive |
-| activeTextColor                     |  string  |  "#fff"   | set the text color when it is active                                                      |
-| innerTextStyle                      |  style   |           | set your custom text style                                                                |
-| activeBackgroundColor               |  string  | "#F5C812" | set your active background color                                                          |
-| activeInnerContainerBackgroundColor |  style   |  "#fff"   | set the color of the inner container when it is active                                    |
-| innerActiveTextColor                |  string  | "#F5C812" | if there are numbers in the inner container, you can change the color when it is active   |
-| onPress                             | function |    ()     | set your own function when onPress                                                        |
-| onChange                            | function |    ()     | set your own function when onChange                                                       |
+| Property                |   Type   |  Default  | Description                                                                               |
+| ----------------------- | :------: | :-------: | ----------------------------------------------------------------------------------------- |
+| tabs                    |  array   |           | Set your tab bar items                                                                    |
+| itemStyle               |  style   |  default  | set your custom item button style                                                         |
+| bottomTextStyle         |  style   |  default  | set your custom text style                                                                |
+| selectedItem            |  number  |     0     | set your initial item                                                                     |
+| innerContainerHeight    |  number  |    50     | set the height of the inner container                                                     |
+| innerContainerWeight    |  number  |    50     | set the width of the inner container                                                      |
+| activeBackgroundColor   |  string  | "#F5C812" | set your active background color                                                          |
+| inActiveBackgroundColor |  string  | "#faeed9" | set the background color when it is inactive                                              |
+| inActiveTextColor       |  string  | "#6e685f" | set the text color when it is inactive                                                    |
+| activeTextColor         |  string  |  "#fff"   | set the text color when it is active                                                      |
+| ImageComponent          |  Image   |   Image   | set on your own Image Component                                                           |
+| imageStyle              |  style   |  default  | set your custom image style                                                               |
+| innerActiveTextColor    |  string  | "#F5C812" | if there are numbers in the inner container, you can change the color when it is active   |
+| innerInActiveTextColor  |  string  | "#F5C812" | if there are numbers in the inner container, you can change the color when it is inactive |
+| innerTextStyle          |  style   |  default  | set your custom text style                                                                |
+| onPress                 | function | undefined | set your own function when onPress                                                        |
+| onChange                | function | undefined | set your own function when onChange                                                       |
 
 ## Author
 
