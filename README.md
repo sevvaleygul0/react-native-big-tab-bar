@@ -110,14 +110,6 @@ export type ITabBar = {
 | onPress                             | function |    ()     | set your own function when onPress                                                        |
 | onChange                            | function |    ()     | set your own function when onChange                                                       |
 
-## Future Plans
-
-- [x] ~~LICENSE~~
-
-# Change Log
-
-Change log will be here !
-
 ## Author
 
 Sevval Eygul, sevvalleygull@gmail.com
