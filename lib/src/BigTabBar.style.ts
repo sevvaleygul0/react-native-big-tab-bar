@@ -6,11 +6,14 @@ interface Style {
 }
 
 export const _buttonStyle = (
+  height: number,
+  width: number,
   backgroundColor: string,
   activeBackgroundColor: string,
   isActive: boolean,
 ): ViewStyle => ({
-  minWidth: 72,
+  height,
+  width,
   borderRadius: 40,
   margin: 10,
   alignItems: 'center',

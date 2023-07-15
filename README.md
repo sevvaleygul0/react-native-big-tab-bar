@@ -102,6 +102,8 @@ image?: any;
 | ----------------------- | :------: | :-------: | ----------------------------------------------------------------------------------------- |
 | tabs                    |  array   |           | Set your tab bar items                                                                    |
 | itemStyle               |  style   |  default  | set your custom item button style                                                         |
+| height                  |  number  |    120    | set your custom item height value                                                         |
+| width                   |  number  |    72     | set your custom item width value                                                          |
 | bottomTextStyle         |  style   |  default  | set your custom text style                                                                |
 | selectedItem            |  number  |     0     | set your initial item                                                                     |
 | innerContainerHeight    |  number  |    50     | set the height of the inner container                                                     |

@@ -50,7 +50,6 @@ const App = () => {
     <View
       style={{
         marginTop: 200,
-        height: 150,
       }}>
       <BigTabBar tabs={tabs} />
     </View>
