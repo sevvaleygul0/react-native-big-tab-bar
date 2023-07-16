@@ -34,12 +34,6 @@ npm i react-native-big-tab-bar
 import BigTabBar from "react-native-big-tab-bar";
 ```
 
-# Usage
-
-```
-<BigTabBar tabs={tabs} />
-```
-
 ## Data Model
 
 ```
