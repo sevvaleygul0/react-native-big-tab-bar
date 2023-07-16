@@ -28,16 +28,6 @@ Add the dependency:
 npm i react-native-big-tab-bar
 ```
 
-## Peer Dependencies
-
-###### IMPORTANT! You need install them
-
-```js
-"react-native-androw": "0.0.34"
-```
-
-`
-
 ## Import
 
 ```jsx
